@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 5px;
+}
+
+body{
+    background-image: url('./imagen\ 9.jpg');
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    min-height: 100%;
+}
+.logo{
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 0%;
+    padding: 0%;
+}
+.logo:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.ol{
+  color: rebeccapurple;
+}
+.logo2{
+    width: 210px;
+    border-radius: 20px;
+}
+.logo2:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+    
+}
+h1{
+    color: mediumorchid;
+    text-shadow: 1px 1px black;
+}
+h2{
+ color: rgb(250, 0, 196);
+}
+p{
+color: purple;
+}
+.header {
+    grid-area: header;
+    background-color: rgba(255, 255, 255, 0.534);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 130px;
+}
+.uno{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 50px;
+    max-width: 110px;
+    padding-top: 10px;
+    background-image: url('imagen\ 4.jpg');
+}
+.uno:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.dos{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 50px;
+    max-width: 110px;
+    padding-top: 10px;
+    background-image: url('imagen\ 5.jpg');
+}
+.dos:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.tres{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 50px;
+    max-width: 110px;
+    padding-top: 10px;
+    background-image: url('imagen\ 3.jpg');
+}
+.tres:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.cuatro{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+    background-image: url('imagen\ 10.jpg');
+}
+.cuatro:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.navbar {
+    grid-area: navbar;
+    background-image: url('Marca de Agua Café Colao.png');
+    background-size: 80px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+}
+.imgnav{
+    width: 80px;
+    border-radius: 50px;
+}
+.logo3{
+    width: 400px;
+}
+.yia{
+    width: 200px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgba(255, 255, 255, 0.712);
+    text-align: justify;
+    color: antiquewhite;
+    text-shadow: 1px 1px green;
+    width: 220px;
+}
+.main {
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0.726);
+}
+.imgmain{
+    width: 00px;
+    border-radius: 20px;
+}
+.imgmain:hover{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+.footer {
+    grid-area: footer;
+}
+@media (min-width:600px){
+    .grid-container{
+        grid-gap: 20px;
+        grid-template: 
+        "header  header" 130px
+        "navbar  navbar" auto
+        "sidebar main"   auto 
+        "footer  footer" 100px/
+        220px    auto;
+        overflow-y: scroll;
+    }
+}
+@media (min-width:900px){
+    .grid-container{
+        grid-template: 
+        "header  header header"  130px
+        "navbar  main   sidebar" auto
+        "footer  footer footer"  100px/
+        130px    auto    220px;
+        overflow-y: scroll;
+    }
+    .navbar {
+        grid-area: navbar;
+        grid-template: 
+        "uno"       100px
+        "dos"       100px
+        "tres"      100px
+        "cuatro"    100px;
+        grid-row-gap: 20px;
+    }
+}
